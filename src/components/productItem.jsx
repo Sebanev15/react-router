@@ -6,7 +6,7 @@ const ListItem = ({ productItem }) => {
   const [item, setItem] = useState(productItem);
 
   return (
-    <div className={classes.itemCard}>
+    <li className={classes.itemCard}>
       <span className={classes.icon} role="img" aria-label={item.description}>
         {item.icon}
       </span>
@@ -17,7 +17,7 @@ const ListItem = ({ productItem }) => {
           Details
         </Link>
       </section>
-    </div>
+    </li>
   );
 };
 
