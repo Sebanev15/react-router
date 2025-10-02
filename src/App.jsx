@@ -16,9 +16,14 @@ function App() {
         in combination with the Navigate component you can redirect the user to a default page */}
         <Route path="/*" element={<Navigate replace to="/welcome" />} />
 
-        {/* You can compose the routes the routes wrapping the Route components */}
+        {/* You can compose the routes by wrapping the Route components  and using 
+        the Outlet Component from React Router*/}
         <Route path="/welcome/*" element={<WelcomePage />}>
-          <Route path="new-user" element={<p> Welcome, new user! </p>} />
+          <Route path="new-user" element={<p> Welcome, new user!</p>} />
+          <Route
+            path="to-outlet"
+            element={<p> Welcome, to the outlet! 🛍️</p>}
+          />
         </Route>
 
         {/* If composing routes doesn't looks clear for you, you always can define
