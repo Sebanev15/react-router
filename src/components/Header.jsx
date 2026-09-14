@@ -23,6 +23,14 @@ const Header = () => {
               Products
             </NavLink>
           </li>
+          <li>
+            <NavLink
+              className={(navData) => (navData.isActive ? classes.active : "")}
+              to="/countries"
+            >
+              Countries
+            </NavLink>
+          </li>
         </ul>
       </nav>
     </header>
