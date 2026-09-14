@@ -12,18 +12,12 @@ const ProductDetailPage = () => {
 
   const [product, setProduct] = useState(null);
 
-  // We want to navigate to the home page after a short delay
-  const navigateToHome = () => {
-    setTimeout(() => {
-      navigate("/welcome");
-    }, 5000);
-  };
 
   useEffect(() => {
     // Fetch the product details using async/await
     const fetchProduct = async () => {
       try {
-        const url = `http://localhost:3000/foods/${params.productId}`;
+        const url = `https://countries.dev/countries/alpha/${params.countrieId}`;
         const res = await fetch(url);
         const data = await res.json();
         setProduct(data);
@@ -33,8 +27,7 @@ const ProductDetailPage = () => {
     };
 
     fetchProduct();
-    navigateToHome();
-  }, [params.productId, navigate]);
+  }, [params.countrieId, navigate]);
 
   // We want to render some loading state if the product is not yet loaded 👇
   if (!product) return <p>Loading product...</p>;
@@ -49,11 +42,11 @@ const ProductDetailPage = () => {
         margin: "20px",
       }}
     >
-      <h1>Product details</h1>
-      <span style={{ fontSize: "5rem" }}>{product.icon}</span>
-      <p>Description: {product.description}</p>
-      <span>${product.price}</span>
-      <p>Product Code: {params.productId}</p>
+      <h1>{product.name}</h1>
+      <img src={product.flags.svg}/>
+      <p>Capital: {product.capital}</p>
+      <p>Region: {product.region}</p>
+      <p>poblacion: {product.population}</p>
     </div>
   );
 };
