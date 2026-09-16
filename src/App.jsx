@@ -6,10 +6,14 @@ import ProductDetailPage from "./pages/ProductDetailPage.jsx";
 import WelcomePage from "./pages/WelcomePage.jsx";
 import CountriesPage from "./pages/CountriesPage.jsx";
 import CountryDetailPage from "./pages/CountryDetailPage.jsx";
+import { useTheme } from "./context/ThemeContext.jsx";
 
 function App() {
+  // Ejercicio UT5.1.2: modo actual (light/dark) guardado en el ThemeContext
+  const { darkMode } = useTheme();
+
   return (
-    <>
+    <div className={darkMode ? "dark-mode" : "light-mode"}>
       <Header />
       {/* 👇 Here you can use Routes or Switch component, Routes match with the most
       specific route so the order doesn't matter  */}
@@ -40,7 +44,7 @@ function App() {
         <Route path="/countries" element={<CountriesPage />} />
         <Route path="/countries/:cca2" element={<CountryDetailPage />} />
       </Routes>
-    </>
+    </div>
   );
 }
 
