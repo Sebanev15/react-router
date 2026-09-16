@@ -53,3 +53,15 @@ code {
 .read-the-docs {
   color: #888;
 } */
+
+.banderaPais{
+  width: 50%;
+}
+
+.contenedorPais{
+  width: 40%;
+}
+.contenedorPaises{
+  display: flex;
+  flex-wrap: wrap;
+}
