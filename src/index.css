@@ -56,10 +56,16 @@ code {
 
 .banderaPais{
   width: 50%;
+  border-radius: 20px;
 }
 
 .contenedorPais{
   width: 40%;
+  display: flex;
+  padding: 2rem;
+  border: solid 2px black;
+  margin: 1rem;
+  border-radius: 15px;
 }
 .contenedorPaises{
   display: flex;
@@ -70,4 +76,16 @@ code {
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+
+.dark-mode{
+  background-color: #2a2a2a;
+  color: white;
+  border-color: white;
+}
+
+.light-mode{
+  background-color: white;
+  color: #2a2a2a;
+  border-color: black;
 }
