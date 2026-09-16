@@ -6,9 +6,9 @@ const ListItem = ({ countrieItem }) => {
   const [item, setItem] = useState(countrieItem);
   const { darkMode } = useTheme();
   return (
-    <li className={darkMode ? "dark-mode" : "light-mode" + classes.itemCard + " contenedorPais " }>
+    <li className={darkMode ? "dark-mode " : "light-mode " + " contenedorPais " }>
       <img className="banderaPais" src={item.flags.svg}/>
-      <section className={classes.textSection + darkMode ? "dark-mode" : "light-mode"}>
+      <section className={darkMode ? "dark-mode" : "light-mode" + classes.textSection }>
         <h2>{item.name}</h2>
           <p>{item.subregion}</p>
         <Link className={classes} to={`${item.alpha3Code}`}>

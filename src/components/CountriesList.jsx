@@ -5,7 +5,7 @@ const CountriesList = ({ items }) => {
   const { darkMode } = useTheme();
 
   return items?.length > 0 ? (
-    <ul className={"contenedorPaises " + darkMode ? "dark-mode" : "light-mode"}>
+    <ul className={darkMode ? "dark-mode " : "light-mode "+ "contenedorPaises " }>
       {items.map((item) => {
         return <CountrieItem key={item.alpha3Code} countrieItem={item} />;
       })}
