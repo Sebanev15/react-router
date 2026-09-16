@@ -34,7 +34,7 @@ const ProductDetailPage = () => {
 
   // We want to render the product details 👇
   return (
-    <div
+    <div className="contenedorPaisDetalle"
       style={{
         borderRadius: "15px",
         border: "solid black 4px",
@@ -43,7 +43,7 @@ const ProductDetailPage = () => {
       }}
     >
       <h1>{product.name}</h1>
-      <img src={product.flags.svg}/>
+      <img className="banderaPais" src={product.flags.svg}/>
       <p>Capital: {product.capital}</p>
       <p>Region: {product.region}</p>
       <p>poblacion: {product.population}</p>

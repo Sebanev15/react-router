@@ -65,3 +65,9 @@ code {
   display: flex;
   flex-wrap: wrap;
 }
+
+.contenedorPaisDetalle{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
