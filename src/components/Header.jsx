@@ -1,10 +1,10 @@
-import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 import classes from "./Header.module.css";
+import { useTheme } from "../context/ThemeContext.jsx";
 
 const Header = () => {
-  const [darkMode, setDarkMode] = useState(false);
+  const { darkMode, toggleTheme } = useTheme();
 
   return (
     <header className={classes.header}>
@@ -32,7 +32,7 @@ const Header = () => {
       <button
         type="button"
         className={classes.themeToggle}
-        onClick={() => setDarkMode((prev) => !prev)}
+        onClick={toggleTheme}
       >
         {darkMode ? "☀️ Light mode" : "🌙 Dark mode"}
       </button>
